@@ -1,13 +1,15 @@
 <md-toolbar layout="row" layout-align="center center">
 
-  <md-button href="https://github.com/Swiip/generator-gulp-angular">Gulp Angular</md-button>
-
-  <section flex layout="row" layout-align="left center">
-    <md-button href="#" class="md-raised">Home</md-button>
-    <md-button href="#" class="md-raised">About</md-button>
-    <md-button href="#" class="md-raised">Contact</md-button>
-  </section>
-
-  <md-button class="acme-navbar-text">Application was created {{ vm.relativeDate }}.</md-button>
-
+  <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
+        <md-nav-item md-nav-click="#home" name="home">home</md-nav-item>
+        <md-nav-item md-nav-click="#presentation" name="about">about</md-nav-item>
+        <md-nav-item md-nav-click="#skills" name="skills">skills</md-nav-item>
+        <md-nav-item md-nav-click="#work" name="work">work</md-nav-item>
+        <md-nav-item md-nav-click="#education" name="education">education</md-nav-item>
+        <md-nav-item md-nav-click="#contacts" name="contacts">contacts</md-nav-item>
+        <!-- these require actual routing with ui-router or ng-route, so they won't work in the demo
+        <md-nav-item md-nav-sref="app.page4" name="page4">Page Four</md-nav-item>
+        <md-nav-item md-nav-href="#page5" name="page5">Page Five</md-nav-item>
+        -->
+      </md-nav-bar>
 </md-toolbar>

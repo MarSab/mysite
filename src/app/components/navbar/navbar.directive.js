@@ -3,29 +3,26 @@
 
   angular
     .module('mysite')
-    .directive('acmeNavbar', acmeNavbar);
+    .directive('myNav', myNav);
 
   /** @ngInject */
-  function acmeNavbar() {
+  function myNav() {
     var directive = {
       restrict: 'E',
       templateUrl: 'app/components/navbar/navbar.html',
       scope: {
-          creationDate: '='
+        creationDate: '='
       },
-      controller: NavbarController,
-      controllerAs: 'vm',
+      controller: AppCtrl,
+      controllerAs: 'nav',
       bindToController: true
     };
 
     return directive;
 
     /** @ngInject */
-    function NavbarController(moment) {
-      var vm = this;
-
-      // "vm.creationDate" is available by directive option "bindToController: true"
-      vm.relativeDate = moment(vm.creationDate).fromNow();
+    function AppCtrl($scope) {
+      $scope.currentNavItem = 'home';
     }
   }
 

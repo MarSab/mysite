@@ -7,6 +7,8 @@ var conf = require('./conf');
 var browserSync = require('browser-sync');
 
 var $ = require('gulp-load-plugins')();
+var nib = require('nib');
+var rupture = require('rupture');
 
 var wiredep = require('wiredep').stream;
 var _ = require('lodash');
@@ -44,7 +46,7 @@ var buildStyles = function() {
     .pipe($.inject(injectFiles, injectOptions))
     .pipe(wiredep(_.extend({}, conf.wiredep)))
     .pipe($.sourcemaps.init())
-    .pipe($.stylus()).on('error', conf.errorHandler('Stylus'))
+    .pipe($.stylus({use: [nib(), rupture()]})).on('error', conf.errorHandler('Stylus'))
     .pipe($.autoprefixer()).on('error', conf.errorHandler('Autoprefixer'))
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest(path.join(conf.paths.tmp, '/serve/app/')));

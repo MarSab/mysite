@@ -1,0 +1,16 @@
+<h1 class="title title--right">What did I study?</h1>
+
+<timeline>
+    <timeline-event ng-repeat="event in ed.events" side="alternate">
+      <timeline-badge class="{{event.badgeClass}}">
+        <i class="glyphicon {{event.badgeIconClass}}"></i>
+      </timeline-badge>
+      <timeline-panel class="{{event.badgeClass}}">
+        <timeline-heading>
+          <h4 class="subtitle subtitle--orange">{{event.title}}</h4>
+          <h5>{{event.subtitle}}</h5>
+        </timeline-heading>
+        <p>{{event.content}}</p>
+      </timeline-panel>
+    </timeline-event>
+  </timeline>

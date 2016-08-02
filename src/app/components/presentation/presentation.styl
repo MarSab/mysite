@@ -1,0 +1,38 @@
+#presentation
+  background: bgColor;
+
+.presentation__container
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+
+.presentation
+  &__idCard
+    flex:  0 1 25%
+
+  &__about
+    flex:  0 1 40%
+
+.id_card
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+
+  &__row
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%
+
+  &__half
+    width: 100%
+    &--icon
+      display: flex;
+      justify-content: center;
+
+.material-icons
+  color: mariGreen;

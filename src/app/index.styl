@@ -5,6 +5,23 @@
 // bower:styl
 // endbower
 
+//COLORS
+bgColor = #d9d9d9
+bgColor2= white
+textColor = #7d7d7d;
+mariGreen = #00b397;
+mariOrange = #f4763b;
+
+@font-face
+  font-family: 'jenna_sueregular';
+  src: url('../fonts/jennasue-webfont.eot');
+  src: url('../fonts/jennasue-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/jennasue-webfont.woff') format('woff'),
+       url('../fonts/jennasue-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+
+
 @import url("//fonts.googleapis.com/css?family=Roboto\+Slab:400,700|Roboto:400,700,700italic,400italic")
 
 @font-face
@@ -43,7 +60,23 @@
   font-feature-settings: 'liga';
 
 html
-  font-family 'Roboto Slab', serif
+  font-family 'Roboto', normal;
+  font-size: 100%
+
+.title, .subtitle
+  font-family: 'jenna_sueregular';
+  font-weight: 100;
+  margin-top: 0
+
+.subtitle
+  font-size: 2.5em;
+  &--orange
+    color: mariOrange
+
+.title
+  font-size: 6em
+  &--right
+    text-align: right;
 
 [layout=row]
   flex-direction row
@@ -59,24 +92,7 @@ md-toolbar
     background-color black
 
 section
-  &.jumbotron
-    margin-bottom 30px
-    padding 1px 30px
-    background-color #5aadbb
-    text-align center
-    color white
-    h1
-      font-size 3em
-
-.techs
-  display flex
-  flex-flow row wrap
-  md-card
-    width 30%
-    img
-      &.pull-right
-        float right
-        width 100px
+  padding: 2em
 
 /**
  *  Do not remove the comments below. It's the markers used by gulp-inject to inject

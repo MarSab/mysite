@@ -1,0 +1,75 @@
+#skills
+  background: bgColor2;
+  height: 100vh
+  +below(1270px)
+    height: auto
+  h1
+    color: textColor
+
+.lang_container
+  width: 10em;
+  position: relative;
+  .lang--text
+    position: absolute;
+    top: calc(50% - .60em)
+    left: calc(50% - .50em)
+    color: textColor
+    text-transform: uppercase;
+    font-size: 1.5em
+
+
+.skills
+  &__box
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 80%
+    margin: auto
+
+  &__card
+    padding: 1.5em;
+    flex: 1
+    &--lang
+      display: flex;
+      justify-content: center;
+    &--pers
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+.tech_skills
+  &__card
+    margin:8px auto;
+    max-width: 80%
+  &__container
+    display: flex;
+    justify-content:space-around;
+    align-items:baseline;
+  &__block
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items:center;
+    &--row
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+
+
+/////meter customization
+.meter-bar {
+  background: #cccccc;
+}
+
+.meter-optimum-value {
+  background: mariGreen;
+}
+.meter-suboptimum-value{
+  background: mariGreen
+}
+.meter-even-less-good-value{
+  background: mariGreen
+}
+
+
+/*# sourceMappingURL=angular-meter-polyfill.css.map*/
