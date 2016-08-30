@@ -1,6 +1,12 @@
 #presentation
   background: bgColor;
 
+
+md-icon.md-default-theme, md-icon
+  color: mariOrange;
+  width: 2em;
+  height: 2em;
+
 .presentation__container
   display: flex;
   flex-wrap: wrap;
@@ -10,29 +16,53 @@
 
 .presentation
   &__idCard
-    flex:  0 1 25%
+    +between('m', 'l')
+      flex:  0 1 40%
+    +at('l')
+      flex: 0 1 45%
+    +above('xl')
+      flex: 0 1 25%
 
   &__about
-    flex:  0 1 40%
+    +above('m')
+      flex:  0 1 40%
+    &--interests
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      .interest
+        font-size: 2.5em
 
 .id_card
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-around;
+  flex-flow: column wrap;
+  justify-content: center;
   align-items: center;
+  +above('m')
+    justify-content: space-around;
 
   &__row
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
+    flex-flow: row wrap;
+    justify-content: center;
     align-items: center;
-    width: 100%
+    +above('m')
+      justify-content: space-between;
+      width: 100%
+
 
   &__half
-    width: 100%
-    &--icon
-      display: flex;
-      justify-content: center;
+      width: 100%;
+      text-align: center;
+      +above('l')
+        flex: 0 1 50%
+        text-align: left;
+      &--icon
+        display: flex;
+        justify-content: center;
+        +above('m')
+          text-align: center;
 
 .material-icons
   color: mariGreen;

@@ -1,9 +1,22 @@
 #home
   background-image: url("../assets/images/home_bg.png");
   background-size: cover;
-  background-position: center;
-  height: 70vh
+  background-position:left;
+  height: 65vh
+  +above('m')
+    background-position: center;
 
+  my-home
+    height: 65vh;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 
 
   .home_container
@@ -17,20 +30,26 @@
   padding: 1em
 
 img
-  +below(1270px)
-    height: 200px
-    width: 200px
+  height: 120px
+  width: 120px
+  +above('m')
+    height:180px
+    width: 180px
+  +above('xl')
+    height: 250px
+    width: 250px
 
 .container__text
-  h1, h3
+  .title, .subtitle
     color: white
     margin: 0
-  h1
-    font-size: 9.5em
-    +below(1270px)
-      font-size: 5em
-  h3
-    font-size: 2.5em
-    font-weight: 400;
-    +below(1270px)
-      font-size: 1.5em;
+    text-align: center;
+    +above('l')
+      text-align: left;
+
+  .title
+    +below('s')
+      font-size: 3em
+  .subtitle
+    +above('m')
+      font-size: 2.5em

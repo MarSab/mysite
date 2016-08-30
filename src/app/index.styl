@@ -69,27 +69,28 @@ html
   margin-top: 0
 
 .subtitle
-  font-size: 2.5em;
+  font-size: 2em
+  +between('m', 'l')
+    font-size: 2.5em
+  +at('l')
+    font-size: 3em
+  +above('xl')
+    font-size: 4em
   &--orange
     color: mariOrange
+  &--basic
+    font-family 'Roboto', normal;
+    font-size: 1em
 
 .title
-  font-size: 6em
+  font-size: 2.6em
+  +above('m')
+    font-size: 6em
   &--right
     text-align: right;
 
 [layout=row]
   flex-direction row
-
-.browsehappy
-  margin 0.2em 0
-  background #ccc
-  color #000
-  padding 0.2em 0
-
-md-toolbar
-  &.md-default-theme
-    background-color black
 
 section
   padding: 2em
