@@ -1,4 +1,22 @@
 #education
-  background: bgColor2
+  background: bgColor2;
+  height: auto
+  +above('m')
+    padding: 2em 5em;
+  +above('xl')
+    padding: 2em 15em;
+  +above('l')
+    background: bgColor2 url('../assets/images/drawing_2.jpg') left center no-repeat;
+    background-size: contain;
   h1
     color: textColor
+  timeline-panel
+    border-bottom: mariOrange 5px solid;
+
+
+timeline-badge
+  &.education
+    background-color: mariGreen
+  for $i in 2..4
+    &.education-{$i}
+      background-color: lighten(mariGreen, ($i*4))

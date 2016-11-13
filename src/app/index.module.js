@@ -3,6 +3,18 @@
 
 //app constructor: appname, dependecies array
   angular
-    .module('mysite', ['ngSanitize', 'ngAria', 'ngResource', 'ui.router', 'ngMaterial', 'toastr', 'minimalPiechart','ngMaterial', 'ngMessages','angular-meter-polyfill', 'angular-timeline']);
+    .module('mysite', ['ngSanitize',
+                        'ngAria',
+                        'ngResource',
+                        'ui.router',
+                        'ngMaterial',
+                        'toastr',
+                        'minimalPiechart',
+                        'ngMaterial',
+                        'ngMessages',
+                        'angular-meter-polyfill',
+                        'angular-timeline',
+                        'angular-scroll-animate',
+                        'ngMap']);
 
 })();

@@ -1,4 +1,17 @@
 #work
   background: bgColor
+  +above('xl')
+    padding: 2em 15em;
   h1
     color: textColor
+  h4
+    color: mariGreen;
+  timeline-panel
+    border-bottom: mariGreen 5px solid;
+
+timeline-badge
+  &.work
+    background-color: mariOrange
+  for $i in 2..3
+    &.work-{$i}
+      background-color: lighten(mariOrange, ($i*4))

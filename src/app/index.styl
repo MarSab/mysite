@@ -22,7 +22,7 @@ mariOrange = #f4763b;
   font-style: normal;
 
 
-@import url("//fonts.googleapis.com/css?family=Roboto\+Slab:400,700|Roboto:400,700,700italic,400italic")
+@import url("//fonts.googleapis.com/css?family=Roboto:400,700|Roboto:400,700,700italic,400italic")
 
 @font-face
   font-family: 'Material Icons';
@@ -47,6 +47,9 @@ mariOrange = #f4763b;
   text-transform: none;
   letter-spacing: normal;
   word-wrap: normal;
+  color: mariGreen;
+  &.icon-white
+    color: white
 
   /* Support for all WebKit browsers. */
   -webkit-font-smoothing: antialiased;
@@ -59,14 +62,26 @@ mariOrange = #f4763b;
   /* Support for IE. */
   font-feature-settings: 'liga';
 
-html
-  font-family 'Roboto', normal;
+
+
+html, body
+  font-family 'Roboto', 'Arial','sans serif', normal;
   font-size: 100%
+  md-content
+    color: rgba(0, 0, 0, .4)
+    font-weight: normal;
+    overflow: inherit;
+  a
+    color: rgba(0, 0, 0, .4)
+    text-decoration: none;
+    &:hover
+      color: rgba(mariOrange, .6)
+
 
 .title, .subtitle
   font-family: 'jenna_sueregular';
   font-weight: 100;
-  margin-top: 0
+  margin: 0
 
 .subtitle
   font-size: 2em
@@ -81,6 +96,12 @@ html
   &--basic
     font-family 'Roboto', normal;
     font-size: 1em
+  &--margin
+    margin-top: 1.2em
+    +above('l')
+      margin-top: 0
+  &--timeline
+    font-size: 2em
 
 .title
   font-size: 2.6em
@@ -94,6 +115,13 @@ html
 
 section
   padding: 2em
+
+timeline-panel
+  transition: padding .2s ease-out;
+  margin: 0 -25px;
+  &:hover
+    +above('l')
+      padding: 25px
 
 /**
  *  Do not remove the comments below. It's the markers used by gulp-inject to inject

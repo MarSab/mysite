@@ -1,13 +1,17 @@
 #skills
   background: bgColor2;
-  height: 100vh
-  +below(1270px)
-    height: auto
+  height: auto
+  padding: 2em 0;
+  +above('m')
+    padding: 2em 5em;
+  +above('xl')
+    padding: 2em 15em;
+    background: bgColor2 url('../assets/images/drawing.jpg') left center no-repeat;
+    background-size: contain;
   h1
     color: textColor
-
+  
 .lang_container
-  width: 10em;
   position: relative;
   .lang--text
     position: absolute;
@@ -15,61 +19,90 @@
     left: calc(50% - .50em)
     color: textColor
     text-transform: uppercase;
-    font-size: 1.5em
+    font-size: 1em
+    +above('m')
+      font-size: 1.5em
 
 
 .skills
   &__box
     display: flex;
     flex-wrap: wrap;
-    max-width: 80%
     margin: auto
-
   &__card
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin-top: .8em;
     padding: 1.5em;
-    flex: 1
+    flex:auto;
+    +above('l')
+      flex: 1
     &--lang
       display: flex;
-      justify-content: center;
+      flex-flow: row wrap;
+      justify-content:center;
+      +above('m')
+        flex-flow: row nowrap;
+        justify-content:space-around;
+        align-items:baseline;
     &--pers
-      display: flex;
-      align-items: center;
-      flex-direction: column;
+      text-align: center;
+
+.title--noflex
+    flex: 0.5 0 0%;
 
 .tech_skills
-  &__card
-    margin:8px auto;
-    max-width: 80%
   &__container
+    width: 100%
     display: flex;
+    flex-flow: column wrap;
     justify-content:space-around;
-    align-items:baseline;
+    align-items:center;
+    +above('m')
+      flex-flow: row wrap;
+      align-items: baseline;
   &__block
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items:center;
+    +above('l')
+      max-width: 33%
     &--row
       display: flex;
       flex-flow: column wrap;
       justify-content: center;
       align-items: center;
+      text-align: center;
+      margin-top: 1em
 
 
-/////meter customization
-.meter-bar {
-  background: #cccccc;
-}
+/////meter and piechart customization
+meter
+  width: 9em
 
-.meter-optimum-value {
+meter::-webkit-meter-bar
+  background:#cccccc;
+  height: .5em;
+  width: 9em
+
+
+meter::-webkit-meter-optimum-value
   background: mariGreen;
-}
-.meter-suboptimum-value{
-  background: mariGreen
-}
-.meter-even-less-good-value{
-  background: mariGreen
-}
+
+
+.piechart-svg
+  +below('m')
+    height: 50%;
+    width: 50%;
+  circle
+    stroke-width: 1.5px
+  .piechart-wheel
+    stroke: #cccccc;
+  .piechart-value
+    stroke: mariGreen;
+    transition-delay: 5s;
 
 
 /*# sourceMappingURL=angular-meter-polyfill.css.map*/

@@ -1,11 +1,15 @@
 #presentation
   background: bgColor;
+  +above(1270px)
+    padding: 2em 10em;
+  h4
+    font-weight: normal;
+    a
+      text-decoration: none;
 
 
 md-icon.md-default-theme, md-icon
   color: mariOrange;
-  width: 2em;
-  height: 2em;
 
 .presentation__container
   display: flex;
@@ -30,7 +34,6 @@ md-icon.md-default-theme, md-icon
       display: flex;
       justify-content: space-around;
       align-items: center;
-
       .interest
         font-size: 2.5em
 
@@ -41,6 +44,7 @@ md-icon.md-default-theme, md-icon
   align-items: center;
   +above('m')
     justify-content: space-around;
+    width: 20em
 
   &__row
     display: flex;
@@ -55,14 +59,16 @@ md-icon.md-default-theme, md-icon
   &__half
       width: 100%;
       text-align: center;
-      +above('l')
+      +above('m')
         flex: 0 1 50%
         text-align: left;
+      +above('xl')
+        flex: 0 1 65%
       &--icon
         display: flex;
         justify-content: center;
+        +above('l')
+          flex: 0 1 25%
         +above('m')
           text-align: center;
-
-.material-icons
-  color: mariGreen;
+          flex: 0 1 10%;
