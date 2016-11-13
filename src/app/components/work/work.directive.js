@@ -45,8 +45,8 @@
       }];
 
       w.animateElementIn = function($el) {
-      $el.removeClass('timeline-hidden');
-      $el.addClass('bounce-in'); // this example leverages animate.css classes
+        $el.removeClass('timeline-hidden');
+        $el.addClass('bounce-in'); // this example leverages animate.css classes
     };
 
 

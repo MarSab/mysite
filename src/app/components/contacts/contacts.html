@@ -3,7 +3,9 @@
 <div class="contacts__container">
 
   <div class="contacts__map">
-    <ng-map center="[43.7101728, 7.2619532]" default-style="false"></ng-map>
+    <ng-map id="map" center="{{mapCenter}}" default-style="false">
+      <marker position="{{mapCenter}}" title="marker" animation="Animation.DROP"></marker>
+    </ng-map>
   </div>
 
   <div class="contacts__links">
@@ -27,7 +29,7 @@
           <i class="material-icons">language</i>
         </md-button>
         <div class="contacts-links__half">
-          <label><a href="/">http://marsab.github.io/</a></label>
+          <label><a href="/">https://marsab.github.io/</a></label>
         </div>
       </div>
       <div layout="row" layout-align="space-between center">

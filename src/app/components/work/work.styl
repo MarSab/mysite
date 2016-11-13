@@ -15,3 +15,9 @@ timeline-badge
   for $i in 2..3
     &.work-{$i}
       background-color: lighten(mariOrange, ($i*4))
+
+timeline-event
+  +above('l')
+    for $i in 2..3
+      &.work-{$i} > li
+        margin-top: ($i*-1em)

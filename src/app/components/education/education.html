@@ -1,7 +1,7 @@
 <h1 class="title title--right">What did I study?</h1>
 
 <timeline>
-    <timeline-event ng-repeat="event in ed.events" side="alternate">
+    <timeline-event ng-repeat="event in ed.events" side="alternate" class="{{event.badgeClass}}">
       <timeline-badge class="{{event.badgeClass}}"  when-visible="ed.animateElementIn"
         class="timeline-hidden">
         <i class="material-icons icon-white">{{event.badgeIconClass}}</i>

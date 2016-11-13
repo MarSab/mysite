@@ -1,17 +1,18 @@
 <h1 class="title title--right">What did I do?</h1>
 <timeline>
-    <timeline-event ng-repeat="event in w.events" side="alternate">
-      <timeline-badge class="{{event.badgeClass}}" when-visible="w.animateElementIn"
+  <timeline-event ng-repeat="event in w.events" side="alternate" class="{{event.badgeClass}}">
+    <timeline-badge class="{{event.badgeClass}}" when-visible="w.animateElementIn"
         class="timeline-hidden">
         <i class="material-icons icon-white">{{event.badgeIconClass}}</i>
-      </timeline-badge>
-      <timeline-panel class="{{event.badgeClass}}" when-visible="w.animateElementIn"
+    </timeline-badge>
+
+    <timeline-panel class="{{event.badgeClass}}" when-visible="w.animateElementIn"
         class="timeline-hidden">
         <timeline-heading>
           <h4 class="subtitle subtitle--timeline">{{event.title}}</h4>
           <h5>{{event.subtitle}}</h5>
         </timeline-heading>
         <p>{{event.content}}</p>
-      </timeline-panel>
-    </timeline-event>
-  </timeline>
+    </timeline-panel>
+  </timeline-event>
+</timeline>

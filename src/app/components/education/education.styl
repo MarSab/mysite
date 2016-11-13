@@ -20,3 +20,9 @@ timeline-badge
   for $i in 2..4
     &.education-{$i}
       background-color: lighten(mariGreen, ($i*4))
+
+timeline-event
+  +above('l')
+    for $i in 2..4
+      &.education-{$i} > li
+        margin-top: ($i*-1em)
