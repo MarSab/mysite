@@ -21,12 +21,12 @@
     return directive;
 
     /** @ngInject */
-    function WorkController() {
+    function WorkController($window) {
       var w = this;
 
       w.events = [{
         badgeClass: 'work work-1',
-        badgeIconClass: 'computer',
+        badgeIconClass: 'work',
         title: 'Web integrator / UI designer consultant',
         subtitle: 'Alten - France',
         content: 'Restyling and creation by scratch of graphic design of UIs, thinking about the User Experience and the possible technical issues . Using of the Material Design guidelines provided by Google. Create functional web pages using HTML5 and CSS3 starting from the mockups. Cross browser and cross device development'
@@ -44,11 +44,13 @@
         content: 'Design and development of HyperTED: a web application able to browse and search through Media Fragments of TED Talks recommending related contents according to semantic entities extracted in the subtitles.'
       }];
 
-      w.animateElementIn = function($el) {
-        $el.removeClass('timeline-hidden');
-        $el.addClass('bounce-in'); // this example leverages animate.css classes
-    };
-
+      var mq = $window.matchMedia( "(min-width: 500px)" );
+      if(mq){
+            w.animateElementIn = function($el) {
+              $el.removeClass('timeline-hidden');
+              $el.addClass('bounce-in'); // this example leverages animate.css classes
+          };
+      }
 
     }
   }

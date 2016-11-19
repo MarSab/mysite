@@ -1,10 +1,6 @@
 #education
   background: bgColor2;
   height: auto
-  +above('m')
-    padding: 2em 5em;
-  +above('xl')
-    padding: 2em 15em;
   +above('l')
     background: bgColor2 url('../assets/images/drawing_2.jpg') left center no-repeat;
     background-size: contain;
@@ -12,6 +8,11 @@
     color: textColor
   timeline-panel
     border-bottom: mariOrange 5px solid;
+    +below('m')
+      &.bounce-in
+        opacity:1;  /* make things invisible upon start */
+        animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+
 
 
 timeline-badge
@@ -20,6 +21,11 @@ timeline-badge
   for $i in 2..4
     &.education-{$i}
       background-color: lighten(mariGreen, ($i*4))
+  +below('m')
+    &.bounce-in
+      opacity:1;  /* make things invisible upon start */
+      animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+
 
 timeline-event
   +above('l')

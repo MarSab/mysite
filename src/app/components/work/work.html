@@ -1,8 +1,7 @@
 <h1 class="title title--right">What did I do?</h1>
 <timeline>
   <timeline-event ng-repeat="event in w.events" side="alternate" class="{{event.badgeClass}}">
-    <timeline-badge class="{{event.badgeClass}}" when-visible="w.animateElementIn"
-        class="timeline-hidden">
+    <timeline-badge class="{{event.badgeClass}}">
         <i class="material-icons icon-white">{{event.badgeIconClass}}</i>
     </timeline-badge>
 

@@ -1,9 +1,11 @@
 #presentation
   background: bgColor;
-  +above(1270px)
-    padding: 2em 10em;
   h4
     font-weight: normal;
+    margin-bottom: 1em;
+    margin-top: 0;
+    +above('m')
+      margin: 1.33em 0;
     a
       text-decoration: none;
 
@@ -41,34 +43,23 @@ md-icon.md-default-theme, md-icon
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   +above('m')
-    justify-content: space-around;
     width: 20em
-
   &__row
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
     align-items: center;
+    justify-content: flex-start;
     +above('m')
-      justify-content: space-between;
+      justify-content: flex-start;
       width: 100%
 
 
   &__half
-      width: 100%;
+    flex-basis: auto
+    +above('xl')
+      flex-basis: auto
+    &--icon
+      flex-basis: 40%
       text-align: center;
-      +above('m')
-        flex: 0 1 50%
-        text-align: left;
-      +above('xl')
-        flex: 0 1 65%
-      &--icon
-        display: flex;
-        justify-content: center;
-        +above('l')
-          flex: 0 1 25%
-        +above('m')
-          text-align: center;
-          flex: 0 1 10%;

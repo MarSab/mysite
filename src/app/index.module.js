@@ -15,6 +15,7 @@
                         'angular-meter-polyfill',
                         'angular-timeline',
                         'angular-scroll-animate',
-                        'ngMap']);
+                        'ngMap',
+                        'ng.deviceDetector']);
 
 })();

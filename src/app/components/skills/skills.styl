@@ -1,16 +1,12 @@
 #skills
   background: bgColor2;
   height: auto
-  padding: 2em 0;
   +above('m')
-    padding: 2em 5em;
-  +above('xl')
-    padding: 2em 15em;
-    background: bgColor2 url('../assets/images/drawing.jpg') left center no-repeat;
+    background: bgColor2 url('../assets/images/drawing.jpg') left top no-repeat;
     background-size: contain;
   h1
     color: textColor
-  
+
 .lang_container
   position: relative;
   .lang--text
@@ -22,6 +18,11 @@
     font-size: 1em
     +above('m')
       font-size: 1.5em
+
+@-moz-document url-prefix()
+  .lang_container
+    width: 150px
+    height: 150px
 
 
 .skills
@@ -48,6 +49,7 @@
         align-items:baseline;
     &--pers
       text-align: center;
+      margin-top: 1em;
 
 .title--noflex
     flex: 0.5 0 0%;
@@ -79,23 +81,54 @@
 
 
 /////meter and piechart customization
-meter
+.meter-inner-element
+  height: 1em;
   width: 9em
+  border: none
+  box-sizing: border-box;
+  display: inline-block;
+  text-align: left;
+  vertical-align: -0.2em;
+  -webkit-user-modify: read-only;
 
-meter::-webkit-meter-bar
-  background:#cccccc;
-  height: .5em;
-  width: 9em
+  .meter-bar
+    border: none
+    background: none;
+    background-color:#cccccc;
+    height: .5em;
+    width: 9em
+    box-sizing: border-box;
+    -webkit-user-modify: read-only;
+
+    .meter-optimum-value
+      background: none;
+      background-color: mariGreen;
+      max-width: 100%;
+      width: 0;
+      height: 100%;
+      box-sizing: border-box;
+      -webkit-user-modify: read-only;
+      &.width-95
+        width: 95%
+      &.width-80
+        width: 80%
+      &.width-60
+        width: 60%
+      &.width-30
+        width: 30%
 
 
-meter::-webkit-meter-optimum-value
-  background: mariGreen;
+
+
+/*# sourceMappingURL=angular-meter-polyfill.css.map*/
 
 
 .piechart-svg
-  +below('m')
-    height: 50%;
-    width: 50%;
+  height: 50%;
+  width: 50%;
+  +above('m')
+    height: 100%;
+    width: 100%;
   circle
     stroke-width: 1.5px
   .piechart-wheel
@@ -103,6 +136,3 @@ meter::-webkit-meter-optimum-value
   .piechart-value
     stroke: mariGreen;
     transition-delay: 5s;
-
-
-/*# sourceMappingURL=angular-meter-polyfill.css.map*/

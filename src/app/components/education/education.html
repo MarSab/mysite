@@ -2,8 +2,7 @@
 
 <timeline>
     <timeline-event ng-repeat="event in ed.events" side="alternate" class="{{event.badgeClass}}">
-      <timeline-badge class="{{event.badgeClass}}"  when-visible="ed.animateElementIn"
-        class="timeline-hidden">
+      <timeline-badge class="{{event.badgeClass}}">
         <i class="material-icons icon-white">{{event.badgeIconClass}}</i>
       </timeline-badge>
       <timeline-panel class="{{event.badgeClass}}" when-visible="ed.animateElementIn"

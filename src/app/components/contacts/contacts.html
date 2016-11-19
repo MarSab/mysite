@@ -3,73 +3,74 @@
 <div class="contacts__container">
 
   <div class="contacts__map">
-    <ng-map id="map" center="{{mapCenter}}" default-style="false">
+    <ng-map id="map" center="{{mapCenter}}" default-style="false" zoom="10">
       <marker position="{{mapCenter}}" title="marker" animation="Animation.DROP"></marker>
     </ng-map>
   </div>
 
-  <div class="contacts__links">
-    <div layout="column" layout-align="center">
-      <div layout="row" layout-align="space-between center">
-        <md-button href="mailto:mll.sabatino@gmail.com" target="_blank" class="md-icon-button social_logo" aria-label="email">
-          <i class="material-icons">email</i>
-        </md-button>
-        <label><a href="mailto:mll.sabatino@gmail.com" target="_blank"> mll.sabatino@gmail.com</a></label>
-      </div>
-      <div layout="row" layout-align="space-between center">
-        <md-button href="tel:0033665132555" class="md-icon-button social_logo" aria-label="phone">
-          <i class="material-icons">phone_android</i>
-        </md-button>
-        <div class="contacts-links__half">
-          <label><a href="tel:0033665132555">+33 (0) 6 65 13 25 55</a></label>
+  <div layout="row" layout-align="space-around center" layout-margin>
+    <div class="contacts__links">
+      <div layout="column" layout-align="center">
+        <div layout="row" layout-align="space-between center">
+          <md-button href="mailto:mll.sabatino@gmail.com" target="_blank" class="md-icon-button social_logo" aria-label="email">
+            <i class="material-icons">email</i>
+          </md-button>
+          <label><a href="mailto:mll.sabatino@gmail.com" target="_blank"> mll.sabatino@gmail.com</a></label>
+        </div>
+        <div layout="row" layout-align="space-between center">
+          <md-button href="tel:0033665132555" class="md-icon-button social_logo" aria-label="phone">
+            <i class="material-icons">phone_android</i>
+          </md-button>
+          <div class="contacts-links__half">
+            <label><a href="tel:0033665132555">+33 (0) 6 65 13 25 55</a></label>
+          </div>
+        </div>
+        <div layout="row" layout-align="space-between center">
+          <md-button href="/" class="md-icon-button social_logo" aria-label="webpage">
+            <i class="material-icons">language</i>
+          </md-button>
+          <div class="contacts-links__half">
+            <label><a href="/">https://marsab.github.io/</a></label>
+          </div>
+        </div>
+        <div layout="row" layout-align="space-between center">
+          <md-button href="skype:mellasab8?call" class="md-icon-button social_logo" aria-label="skype">
+            <md-icon md-svg-icon="../assets/images/social/skype.svg" class="material-icons"></md-icon>
+          </md-button>
+          <div class="contacts-links__half">
+            <label><a href="skype:mellasab8?call">mellasab8</a></label>
+          </div>
         </div>
       </div>
-      <div layout="row" layout-align="space-between center">
-        <md-button href="/" class="md-icon-button social_logo" aria-label="webpage">
-          <i class="material-icons">language</i>
-        </md-button>
-        <div class="contacts-links__half">
-          <label><a href="/">https://marsab.github.io/</a></label>
+    </div>
+
+    <div class="contacts__social">
+      <div layout="column" layout-align="center">
+        <div layout="row" layout-align="space-between center">
+          <md-button href="https://github.com/MarSab" target="_blank" class="md-icon-button social_logo" aria-label="github">
+            <md-icon md-svg-icon="../assets/images/social/github-logo.svg"></md-icon>
+          </md-button>
+          <label><a href="https://github.com/MarSab" target="_blank">/MarSab</a></label>
         </div>
-      </div>
-      <div layout="row" layout-align="space-between center">
-        <md-button href="skype:mellasab8?call" class="md-icon-button social_logo" aria-label="skype">
-          <md-icon md-svg-icon="../assets/images/social/skype.svg" class="material-icons"></md-icon>
-        </md-button>
-        <div class="contacts-links__half">
-          <label><a href="skype:mellasab8?call">mellasab8</a></label>
+        <div layout="row" layout-align="space-between center">
+          <md-button href="https://www.linkedin.com/in/mariellasabatino" target="_blank" class="md-icon-button social_logo" aria-label="linkedin">
+            <md-icon md-svg-icon="../assets/images/social/linkedin.svg"></md-icon>
+          </md-button>
+          <label><a href="https://www.linkedin.com/in/mariellasabatino" target="_blank">/mariellasabatino</a></label>
+        </div>
+        <div layout="row" layout-align="space-between center">
+          <md-button href="https://www.instagram.com/marsab8/" target="_blank" class="md-icon-button social_logo" aria-label="instagram">
+            <md-icon md-svg-icon="../assets/images/social/instagram.svg"></md-icon>
+          </md-button>
+          <label><a href="https://www.instagram.com/marsab8/" target="_blank">/marsab8</a></label>
+        </div>
+        <div layout="row" layout-align="space-between center">
+          <md-button href="http://www.slideshare.net/MariellaSabatino" target="_blank" class="md-icon-button social_logo" aria-label="Slideshare">
+            <md-icon md-svg-icon="../assets/images/social/slideshare-logo.svg"></md-icon>
+          </md-button>
+          <label><a href="http://www.slideshare.net/MariellaSabatino" target="_blank">/MariellaSabatino</a></label>
         </div>
       </div>
     </div>
   </div>
-
-  <div class="contacts__social">
-    <div layout="column" layout-align="center">
-      <div layout="row" layout-align="space-between center">
-        <md-button href="https://github.com/MarSab" target="_blank" class="md-icon-button social_logo" aria-label="github">
-          <md-icon md-svg-icon="../assets/images/social/github-logo.svg"></md-icon>
-        </md-button>
-        <label><a href="https://github.com/MarSab" target="_blank">/MarSab</a></label>
-      </div>
-      <div layout="row" layout-align="space-between center">
-        <md-button href="https://www.linkedin.com/in/mariellasabatino" target="_blank" class="md-icon-button social_logo" aria-label="linkedin">
-          <md-icon md-svg-icon="../assets/images/social/linkedin.svg"></md-icon>
-        </md-button>
-        <label><a href="https://www.linkedin.com/in/mariellasabatino" target="_blank">/mariellasabatino</a></label>
-      </div>
-      <div layout="row" layout-align="space-between center">
-        <md-button href="https://www.instagram.com/marsab8/" target="_blank" class="md-icon-button social_logo" aria-label="instagram">
-          <md-icon md-svg-icon="../assets/images/social/instagram.svg"></md-icon>
-        </md-button>
-        <label><a href="https://www.instagram.com/marsab8/" target="_blank">/marsab8</a></label>
-      </div>
-      <div layout="row" layout-align="space-between center">
-        <md-button href="http://www.slideshare.net/MariellaSabatino" target="_blank" class="md-icon-button social_logo" aria-label="Slideshare">
-          <md-icon md-svg-icon="../assets/images/social/slideshare-logo.svg"></md-icon>
-        </md-button>
-        <label><a href="http://www.slideshare.net/MariellaSabatino" target="_blank">/MariellaSabatino</a></label>
-      </div>
-    </div>
-  </div>
-
 </div>

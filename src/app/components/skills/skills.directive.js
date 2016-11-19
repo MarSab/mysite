@@ -24,10 +24,11 @@
     function SkillsController() {
     //  var sk = this;
 
-    this.animateElementIn = function($el) {
-      $el.removeClass('timeline-hidden');
-      $el.addClass('animated fadeInUp'); // this example leverages animate.css classes
-    };
-    }
+        this.animateElementIn = function($el) {
+          $el.removeClass('timeline-hidden');
+          $el.addClass('animated fadeInUp'); // this example leverages animate.css classes
+          };
+        
+      }
   }
 })();
